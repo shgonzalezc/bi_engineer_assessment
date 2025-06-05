@@ -7,10 +7,10 @@ This project demonstrates my ability to work with raw data, apply SQL and Python
 The goal of this assessment is to process a set of business-related data tables and derive insights through analytics, code, and visualization. I focused on writing clean, efficient, and reproducible code, as well as creating a stakeholder-friendly dashboard.
 
 ### Tools and Technologies used
-- **Visual Studio Code** - 
+- **Visual Studio Code** 
     - **Python (Pandas, SQLite)** – Data loading, transformation, and merging.
     - **SQL** – Joins and logic simulation via SQLite.
-    - **Excel/CSV** – Final data format for Tableau
+    - **Excel/CSV** – Final data output format for Tableau.
 - **Tableau** – Final storytelling and data visualization.
 
 ### Project Folders and Files
@@ -33,7 +33,7 @@ The goal of this assessment is to process a set of business-related data tables 
 - Loaded the original dataset from excel, saving each data sheet into a dataframe.
 - Converted date fields to use the right data type.
 2. Generate Unified datasets (Python and SQLite)
-- Created two versions of joining the data into one single dataset for the final usage, using Pandas and SQL inside SQLite.
+- Created two versions of joining the data into one single dataset for the final usage, using Pandas and SQL inside SQLite (generate_unified_python.py - generate_unified_sqlite.py)
 - Added binary columns to count applications, approvals and used applications for the Tableau analysis, as it helps to create complex calculations in Tableau, or for future blending data sources.
 3. Tableau Dashboard
 - Built visualizations aligned with the assessment tasks for the presentation to Stakeholders.
@@ -45,7 +45,7 @@ The goal of this assessment is to process a set of business-related data tables 
 - I used SQLite for the SQL version to simulate joins similar to what we do in a production BI pipeline.
 
 ### How to Run
-1. Install / import dependencies:
+1. Install / import:
     pandas
     sys
     os

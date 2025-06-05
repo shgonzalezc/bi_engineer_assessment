@@ -3,15 +3,15 @@ import os
 import sqlite3
 import pandas as pd
 
-# Add parent directory to path so we can import scripts.*
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# =================== Add directory to path so we can import scripts.* ===================
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # It is to use Scripts as a package, saved the ETL in memory
 
 from scripts.data_etl import clean_data
 
 file_path = './datasets/sample_datasets.xlsx'
 customers, applications, stores, marketing = clean_data(file_path)
 
-# Create SQLite DB in memory
+# =================== Create SQLite DB in memory ===================
 conn = sqlite3.connect(':memory:')
 
 customers.to_sql("customers", conn, index=False, if_exists="replace")
@@ -19,6 +19,7 @@ applications.to_sql("applications", conn, index=False, if_exists="replace")
 stores.to_sql("stores", conn, index=False, if_exists="replace")
 marketing.to_sql("marketing", conn, index=False, if_exists="replace")
 
+# =================== Create unified dataset ===================
 query = """
     SELECT 
         a.application_id,
@@ -69,6 +70,7 @@ print('Unified dataset result')
 df_unified.info()
 df_unified.head()
 
+# =================== Save Output dayaset ===================
 output_path = "outputs/final_dataset_sqlite.xlsx"
 os.makedirs("outputs", exist_ok=True)
 df_unified.to_excel(output_path, index=False)

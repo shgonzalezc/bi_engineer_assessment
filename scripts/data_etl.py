@@ -1,5 +1,6 @@
 import pandas as pd
 
+# =================== Importing and Fixinf Data types ===================
 def clean_data(file_path):
 
     customers = pd.read_excel(file_path, sheet_name='customers')
