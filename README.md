@@ -38,6 +38,7 @@ The goal of this assessment is to process a set of business-related data tables 
 3. Tableau Dashboard
 - Built visualizations aligned with the assessment tasks for the presentation to Stakeholders.
 - Include trends over time, store-level insights, marketing impact and custom insights.
+- https://10ay.online.tableau.com/#/site/snapfinance/workbooks/2720504/views
 
 ### Notes for Reviewers
 - The dataset was created in a Python function to allow flexible and multiple usage in both Python and SQL pipelines.
